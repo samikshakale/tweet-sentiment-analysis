@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello HTML Templates</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+
+<div>
+
+    <h1>Twitter Sentiment Analysis</h1>
+
+    <p>
+      Want to know what Twitter thinks of the new Barbie movie or what everyone is saying about your favorite restaurant?
+    </p>
+
+    <p>
+      Well, look no further! This website allows you to enter a topic and receive an analysis on all tweets relating to that topic. 
+      The statistics presented in the analysis include the total number of tweets for that topic, the overall sentiment, a few example tweets, a one-liner about all of the tweets, and more.
+    </p>
+
+    <p>
+      To get started, simply enter a topic in the textbox below and click submit!
+    </p>
+
+</div>
+
+<style> 
+    textarea {
+    width: 10%;
+    height: 15px;
+    padding: 16px 16px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 14px;
+    resize: none;
+    }
+  </style>
+  <form action="/result" method="POST"> 
+    <textarea name="textbox"></textarea>
+    <button type="submit" name="submit">Submit</button>
+  </form>
+
+</body>
+</html>

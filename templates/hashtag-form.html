@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello HTML Templates</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+
+<div>
+
+    <h1>This is the results page</h1>
+
+    <p>This will display formatted analysis for tweets containin the hashtag {{ hashtag }} </p>
+
+    <p>
+        The hashtag is {{ results["hashtag"] }}
+    </p>
+    <p>
+        The number of tweets is {{ results["num tweets"] }}
+    </p>
+    <p>
+        The overall sentiment is {{ results["sentiment"] }}
+    </p>
+    
+</div>
+
+
+</body>
+</html>
